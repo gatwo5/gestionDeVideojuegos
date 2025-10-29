@@ -1,7 +1,7 @@
 # gestionDeVideojuegos
-U4P09 - Gestión de videojuegos
+## U4P09 - Gestión de videojuegos
 
-Integrador - Miguel
-Dev A -
-Dev B -
-Dev C -
+### Integrador - Miguel
+### Dev A - Rizwan
+### Dev B - Wenting
+### Dev C - Elia
