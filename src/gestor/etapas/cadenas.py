@@ -1,6 +1,6 @@
 from tuplas import videojuegos
 
-nom = input(print("introduce el nombre de un videojuego"))
+nom = input("introduce el nombre de un videojuego")
 
 # Normalizamos el texto (quitamos espacios y pasamos a minúsculas)
 nombre = nom.strip().lower()
