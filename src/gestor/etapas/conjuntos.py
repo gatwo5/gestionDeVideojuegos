@@ -22,5 +22,4 @@ def gestionar_conjuntos():
     print("Diferencia (tus géneros que él no tiene):", generos - amigo)
 
 
-if __name__ == "__main__":
-    gestionar_conjuntos()
+gestionar_conjuntos()
