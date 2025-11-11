@@ -20,3 +20,7 @@ def gestionar_conjuntos():
     print("\nUnión:", generos | amigo)
     print("Intersección:", generos & amigo)
     print("Diferencia (tus géneros que él no tiene):", generos - amigo)
+
+
+if __name__ == "__main__":
+    gestionar_conjuntos()
