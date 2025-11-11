@@ -9,7 +9,7 @@ def crear(clave, titulo, anio, genero):
     if clave in catalogo:
         print("Juego ya creada")
     else:
-        catalogo[clave.lower()] = {"titulo": titulo, "anio": anio, "genero": genero}
+        catalogo[clave] = {"titulo": titulo, "anio": anio, "genero": {genero}}
         print("Juego añadido correctamente")
 
 # - -- Read -- - #
@@ -18,9 +18,9 @@ def leer(clave):
 
     # Si juego no está vacío, entonces imprime juego
     if juego:
-        print("Título: {juego['titulo]}")
-        print("Año: {juego['anio]}")
-        print("Género: { join( juego['titulo] )}")
+        print("Título:", juego['titulo'])
+        print("Año:", juego['anio'])
+        print("Género:", ",".join(juego['genero'])) # Lo convierte en un conjunto de texto ("," es para separarlos por coma si hay más de 1 género)
     else:
         print("No se encontró juego")
 
@@ -49,3 +49,11 @@ def eliminar(clave):
     else:
         print("No exite ese juego")
 # ================= #
+
+## Pruebas
+crear('zel', 'zelda', 2006, 'mundo abierto')
+leer('zel')
+actualizar('zel', 'ganon')
+leer('zel')
+eliminar('zel')
+leer('zel')
