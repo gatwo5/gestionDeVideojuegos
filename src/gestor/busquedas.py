@@ -41,10 +41,3 @@ def buscar_por_rango_anios(min, max):
             result.append(x)
 
     print(result)
-
-
-## Pruebas
-buscar_por_titulo('The Legend of Zelda')
-buscar_parcial('Mario')
-buscar_por_genero('Acción')
-buscar_por_rango_anios(2000, 2020)

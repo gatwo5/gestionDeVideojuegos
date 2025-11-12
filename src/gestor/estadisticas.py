@@ -17,8 +17,3 @@ def cont_por_genero():
                 cont[genero] = 1
 
     print(cont)
-
-
-## Pruebas
-total_juegos()
-cont_por_genero()
