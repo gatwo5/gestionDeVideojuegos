@@ -1,20 +1,23 @@
-from tuplas import videojuegos
+from tuplas import videojuegos    # Importa la lista de tuplas (título, año, género)
+from listas import lista          # Importa la lista simple de videojuegos
 
-nom = input("introduce el nombre de un videojuego")
+# Función para limpiar el texto
+def limpiar(texto):
+    return texto.strip().lower()
 
-# Normalizamos el texto (quitamos espacios y pasamos a minúsculas)
-nombre = nom.strip().lower()
-# Variable para saber si se encontró
-encontrado = False
+nombre = input("Escribe el nombre de un videojuego: ")# Pide al usuario el nombre del videojuego
+busqueda = limpiar(nombre)  # Normaliza el texto introducido
+encontrado = None  # Variable para guardar el resultado de la búsqueda
 
-# Recorremos la lista de tuplas
-for titulo, genero, anio in videojuegos:
-    # Normalizamos también el título de la lista
-    if titulo.lower() == nombre:
-        print(f"Título: {titulo} | Género: {genero} | Año: {anio}")
-        encontrado = True
-        break
+# Recorre la lista de tuplas y busca coincidencias
+for titulo, anio, genero in videojuegos:
+    if limpiar(titulo) == busqueda:  # Compara el título
+        encontrado = (titulo, anio, genero)  # Guarda el videojuego encontrado
 
-# Si no se encontró
-if not encontrado:
-    print("El videojuego no se encuentra en la lista.")
+
+if encontrado:# Si lo encuentra, muestra la información
+    titulo, anio, genero = encontrado
+    print(f"Título: {titulo} | Género: {genero} | Año: {anio}")
+else:  # Si no existe
+    print("No se encontró ese videojuego en la lista.")
+
