@@ -1,12 +1,4 @@
-catalogo = {
-    "zelda": {"titulo": "The Legend of Zelda", "anio": 1986, "genero": {"Acción"}},
-    "mario": {"titulo": "Super Mario Odyssey", "anio": 2017, "genero": {"Acción"}},
-    "plantavszombie": {"titulo": "Plantas vs Zombies", "anio": 2009, "genero": {"Estrategia"}},
-    "stardew": {"titulo": "Stardew Valley", "anio": 2016, "genero": {"Rol"}},
-}
-# ===== CRUD ====== #
-# - -- Create -- - #
-# Como un constructor
+from catalogo import catalogo
 
 # - -- Total de videojuegos -- - #
 def total_juegos():

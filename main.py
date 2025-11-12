@@ -23,13 +23,26 @@ while eleccion < 1 or eleccion > 6:
             )
             match (eleccion):
                 case 1:
-                    titulo = input("Introduce el titulo")
+                    titulo = input("Introduce el titulo: ")
+                    busquedas.buscar_por_titulo(titulo)
+
                 case 2:
-                    pass
+                    trozo = input("Introduce un fragmento del titulo: ")
+                    busquedas.buscar_parcial(trozo)
+
                 case 3:
-                    pass
+                    genero = input("Introduce el genero: ")
+                    busquedas.buscar_por_genero(genero)
+
                 case 4:
-                    pass
+                    minimo = int(input("Introduce el año mínimo: "))
+                    maximo = int(input("Introduce el año máximo: "))
+                    if minimo > maximo:
+                        minimo, maximo = maximo, minimo
+                    busquedas.buscar_por_rango_anios(minimo, maximo)
+
+                case _:
+                    print("Opción de búsqueda no válida.")
         case 4:
             clave = input("Introduce la clave: ")
             titulo = input("Introduce el titulo: ")
