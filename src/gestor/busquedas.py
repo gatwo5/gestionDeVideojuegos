@@ -1,4 +1,4 @@
-from catalogo import catalogo
+from src.gestor.catalogo import catalogo
 
 # - -- Buscar por título exacto -- - #
 def buscar_por_titulo(titulo):

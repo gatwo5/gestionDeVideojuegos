@@ -1,4 +1,4 @@
-from catalogo import catalogo
+from src.gestor.catalogo import catalogo
 
 # - -- Total de videojuegos -- - #
 def total_juegos():

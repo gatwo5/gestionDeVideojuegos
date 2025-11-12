@@ -49,11 +49,3 @@ def eliminar(clave):
     else:
         print("No exite ese juego")
 # ================= #
-
-## Pruebas
-crear('zel', 'zelda', 2006, 'mundo abierto')
-leer('zel')
-actualizar('zel', 'ganon')
-leer('zel')
-eliminar('zel')
-leer('zel')
