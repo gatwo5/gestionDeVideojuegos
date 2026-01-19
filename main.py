@@ -1,7 +1,8 @@
 from src.gestor import busquedas, catalogo, estadisticas, utils_texto
+from src.gestor.ficheros import almacenar_csv
 
 eleccion = 0
-while eleccion < 1 or eleccion > 6:
+while eleccion < 1 or eleccion > 7:
     utils_texto.imprimir_menu()
     eleccion = int(input())
     match (eleccion):
@@ -58,6 +59,22 @@ while eleccion < 1 or eleccion > 6:
         case 6:
             clave = input("Introduce la clave del juego a eliminar")
             catalogo.eliminar(clave)
+        case 7:
+            nombre_fichero = input("Introduce el nombre del fichero: ")
+            eleccion = int(
+                input(
+                    "1: Almacenar en CSV\n2:Leer desde CSV\n3:Almacenar en JSON\n4:Leer desde JSON "
+                ))
+            
+            match(eleccion):
+                case 1:
+                    almacenar_csv.guardar_catalogo_csv(nombre_fichero)
+                case 2:
+                    print("Rizwan")
+                case 3:
+                    print("Elia")
+                case 4:
+                    print("Wen")
         case _:
             print("Introduce una opción válida")
 

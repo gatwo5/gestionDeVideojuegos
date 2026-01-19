@@ -7,5 +7,6 @@ def imprimir_menu():
     print("4. Crear nuevo juego")
     print("5. Actualizar juego existente")
     print("6. Eliminar juego")
+    print("7. Ficheros CSV/JSON")
     print("===================================")
-    print("Selecciona una opción (1-6): ", end="")
+    print("Selecciona una opción (1-7): ", end="")

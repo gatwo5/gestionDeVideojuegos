@@ -1,4 +1,7 @@
-catalogo = {}
+catalogo =  [{"titulo": "Zelda: Breath of the wild", "anio": 2017, "genero": {"mundo abiero", "rpg"}},
+            {"titulo": "Dead by daylight", "anio": 2016, "genero": {"terror", "asimetrico"}},
+            {"titulo": "Geometry dash", "anio": 2014, "genero": {"plataformas", "musical"}}]
+
 # ===== CRUD ====== #
 # - -- Create -- - #
 # Como un constructor
