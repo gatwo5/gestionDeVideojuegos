@@ -1,4 +1,4 @@
-catalogo =  [{"titulo": "Zelda: Breath of the wild", "anio": 2017, "genero": {"mundo abiero", "rpg"}},
+catalogo =  [{"titulo": "Zelda: Breath of the wild", "anio": 2017, "genero": {"mundo abierto", "rpg"}},
             {"titulo": "Dead by daylight", "anio": 2016, "genero": {"terror", "asimetrico"}},
             {"titulo": "Geometry dash", "anio": 2014, "genero": {"plataformas", "musical"}}]
 
@@ -10,10 +10,10 @@ def crear(clave, titulo, anio, genero):
     clave = clave.lower()
 
     if clave in catalogo:
-        print("Juego ya creada")
+        print("Juego ya creado.")
     else:
         catalogo[clave] = {"titulo": titulo, "anio": anio, "genero": {genero}}
-        print("Juego añadido correctamente")
+        print("Juego añadido correctamente.")
 
 # - -- Read -- - #
 def leer(clave):
@@ -21,11 +21,11 @@ def leer(clave):
 
     # Si juego no está vacío, entonces imprime juego
     if juego:
-        print("Título:", juego['titulo'])
-        print("Año:", juego['anio'])
-        print("Género:", ",".join(juego['genero'])) # Lo convierte en un conjunto de texto ("," es para separarlos por coma si hay más de 1 género)
+        print("Título: ", juego['titulo'])
+        print("Año: ", juego['anio'])
+        print("Género: ", ",".join(juego['genero'])) # Lo convierte en un conjunto de texto ("," es para separarlos por coma si hay más de 1 género)
     else:
-        print("No se encontró juego")
+        print("No se encontró el juego.")
 
 # - -- Update -- - #
 # Por defecto, los valores van a ser none para que ccuando se ejecute la función, pueda elegir qué va a actualizar
@@ -41,14 +41,14 @@ def actualizar(clave, titulo=None, anio=None, genero=None):
         if genero:
             catalogo[clave]["genero"] = genero
     else:
-        print("No existe ese juego")
+        print("No existe ese juego.")
 
 # - -- Delete -- - #
 def eliminar(clave):
     clave = clave.lower()
     if clave in catalogo:
         del catalogo[clave]
-        print("Juego eliminado correctamente")
+        print("Juego eliminado correctamente.")
     else:
-        print("No exite ese juego")
+        print("No exite ese juego.")
 # ================= #

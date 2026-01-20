@@ -1,5 +1,15 @@
 from src.gestor.catalogo import catalogo
 
+# - -- Imprimir resultados de forma limpia y ordenada -- - #
+def imprimir(result):
+    if not result:
+        print("No se encontraron videojuegos.")
+    elif isinstance(result, dict):
+        print(f"{result['titulo']} ({result['anio']}) {', '.join(result['genero'])}")
+    else:
+        for x in result:
+            print(f"{x['titulo']} ({x['anio']}) {', '.join(x['genero'])}")
+
 # - -- Buscar por título exacto -- - #
 def buscar_por_titulo(titulo):
     result = None
@@ -8,7 +18,7 @@ def buscar_por_titulo(titulo):
         if x["titulo"].lower() == titulo.lower():
             result = x
 
-    print(result)
+    imprimir(result)
 
 # - -- Buscar por fragmento en el título -- - #
 def buscar_parcial(trozo):
@@ -18,7 +28,7 @@ def buscar_parcial(trozo):
         if trozo.lower() in x["titulo"].lower():
             result.append(x)
 
-    print(result)
+    imprimir(result)
 
 # - -- Buscar por género -- - #
 def buscar_por_genero(genero_buscar):
@@ -29,7 +39,7 @@ def buscar_por_genero(genero_buscar):
             if genero.lower() == genero_buscar.lower():
                 result.append(x)
 
-    print(result)
+    imprimir(result)
 
 # - -- Buscar por rango de años -- - #
 def buscar_por_rango_anios(min, max):
@@ -40,4 +50,4 @@ def buscar_por_rango_anios(min, max):
         if min <= anio <= max:
             result.append(x)
 
-    print(result)
+    imprimir(result)

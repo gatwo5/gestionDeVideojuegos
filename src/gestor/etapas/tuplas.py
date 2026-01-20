@@ -9,4 +9,4 @@ videojuegos = [
 # Recorrer lista
 for juego in videojuegos:
     titulo, año, genero = juego
-    print(titulo, " (", año, ") ", genero)
+    print(f"{titulo} ({año}) {genero}")

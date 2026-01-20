@@ -15,7 +15,7 @@ def leer_catalogo_json(nombre_fichero):
                     "genero": fila["genero"]
                 })
 
-            print("Archivo leído correctamente")
+            print("Archivo leído correctamente.")
     except IOError as e:
         print("Error durante la operación de archivo: ", strerror(e.errno))
         exit(e.errno)

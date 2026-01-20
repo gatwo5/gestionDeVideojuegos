@@ -48,8 +48,10 @@ def buscar_por_titulo(titulo):
     for x in catalogo.values(): # catalogo.value() devuelve una lista de todos los valores (diccionarios internos)
         if x["titulo"].lower() == titulo.lower():
             result = x
-    
-    print(result)
+    if result:
+        print(f"{result['titulo']} ({result['anio']}) - {', '.join(result['genero'])}")
+    else:
+        print("No se encontró el videojuego.")
 
 # Parcial (contenga un fragmento en el título) [Devuelve varios]
 def buscar_parcial(trozo):
@@ -73,7 +75,12 @@ def buscar_parcial(trozo):
     #    print("No encontrado")
 
     # Devuelve lista de juegos con coincidencias
-    print(result)
+    if result:
+        for juego in result:
+            print(f"{juego['titulo']} ({juego['anio']}) - {', '.join(juego['genero'])}")
+    else:
+        print("No se encontraron videojuegos.")
+
 
 # Por género o rango de años [Devuelve varios]
 def buscar_por_genero(genero_buscar):
@@ -83,8 +90,11 @@ def buscar_por_genero(genero_buscar):
         for genero in x["genero"]:
             if genero.lower() == genero_buscar.lower():
                 result.append(x)
-
-    print(result)
+    if result:
+        for juego in result:
+            print(f"{juego['titulo']} ({juego['anio']}) - {', '.join(juego['genero'])}")
+    else:
+        print("No se encontraron videojuegos.")
 
 def buscar_por_rango_anios(min, max):
     result = []
@@ -92,8 +102,11 @@ def buscar_por_rango_anios(min, max):
         anio = x["anio"]
         if min <= anio <= max:
             result.append(x)
-
-    print(result)
+    if result:
+        for juego in result:
+            print(f"{juego['titulo']} ({juego['anio']}) - {', '.join(juego['genero'])}")
+    else:
+        print("No se encontraron videojuegos.")
 
 # - -- Calcular estadísticas -- - #
 # Num total de videojuegos
@@ -115,7 +128,8 @@ def cont_por_genero():
             else:
                 cont[genero] = 1
 
-    print (cont) # Ej: {'Acción': 2, 'Rol': 3, ...}
+    for genero, cantidad in cont.items():
+        print(f"{genero}: {cantidad}")
 
 # - -- Ejemplos -- - #
 

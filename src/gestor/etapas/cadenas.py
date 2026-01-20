@@ -17,7 +17,7 @@ for titulo, anio, genero in videojuegos:
 
 if encontrado:# Si lo encuentra, muestra la información
     titulo, anio, genero = encontrado
-    print(f"Título: {titulo} | Género: {genero} | Año: {anio}")
+    print(f"{titulo} ({anio}) {genero}")
 else:  # Si no existe
     print("No se encontró ese videojuego en la lista.")
 
