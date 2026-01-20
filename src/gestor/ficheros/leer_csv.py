@@ -17,9 +17,9 @@ def leer_catalogo_csv(nombre_fichero):
                     "genero": fila["genero"]
                 })
 
-            print("Archivo leído correctamente")
+            print("Archivo leído correctamente.")
 
     except IOError as e:
-        print("Error durante la operacion de archivos:", strerror(e.errno))
+        print("Error durante la operacion de archivos: ", strerror(e.errno))
         exit(e.errno)
 

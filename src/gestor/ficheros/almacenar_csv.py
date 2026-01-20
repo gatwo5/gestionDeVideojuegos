@@ -10,7 +10,7 @@ def guardar_catalogo_csv(nombre_fichero):
             writer = csv.DictWriter(fichero, fieldnames=cabeceras, delimiter="|")
             writer.writeheader()
             writer.writerows(catalogo)
-            print("Archivo generado correctamente")
+            print("Archivo generado correctamente.")
     except IOError as e:
-        print("Error durante la operacion de archivos:", strerror(e.errno))
+        print("Error durante la operacion de archivos: ", strerror(e.errno))
         exit(e.errno)
