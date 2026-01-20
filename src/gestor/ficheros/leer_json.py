@@ -4,7 +4,7 @@ import json
 
 def leer_catalogo_json(nombre_fichero):
     try:
-        with open(f"src/gestor/ficheros/escribir_ficheros/{nombre_fichero}.json", "r") as fichero:
+        with open(f"src/gestor/ficheros/leer_ficheros/{nombre_fichero}.json", "r") as fichero:
             datos = json.load(fichero) # Convierte json en una lista de diccionarios
 
             # Recorrer todos los videojuegos del catálogo
