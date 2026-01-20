@@ -5,7 +5,7 @@ from os import strerror
 
 def leer_catalogo_csv(nombre_fichero):
     try:
-        with open(f"src/gestor/ficheros/escribir_ficheros/{nombre_fichero}.csv", "r") as fichero:
+        with open(f"src/gestor/ficheros/leer_ficheros/{nombre_fichero}.csv", "r") as fichero:
             reader = csv.DictReader(fichero, delimiter="|")
 
             catalogo.clear()  # vaciamos el catálogo antes de cargar
