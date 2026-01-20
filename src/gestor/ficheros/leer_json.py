@@ -9,11 +9,11 @@ def leer_catalogo_json(nombre_fichero):
 
             # Recorrer todos los videojuegos del catálogo
             for fila in datos:
-                catalogo.append({ # Añadir al catálogo cada uno
+                catalogo[fila["titulo"]] = { # Añadir al catálogo cada uno
                     "titulo": fila["titulo"],
                     "anio": int(fila["anio"]),
                     "genero": fila["genero"]
-                })
+                }
 
             print("Archivo leído correctamente.")
     except IOError as e:

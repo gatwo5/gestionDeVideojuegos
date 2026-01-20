@@ -1,5 +1,5 @@
 from src.gestor import busquedas, catalogo, estadisticas, utils_texto
-from src.gestor.ficheros import almacenar_csv
+from src.gestor.ficheros import almacenar_csv, almacenar_json, leer_csv, leer_json
 
 eleccion = 0
 while eleccion < 1 or eleccion > 7:
@@ -70,11 +70,11 @@ while eleccion < 1 or eleccion > 7:
                 case 1:
                     almacenar_csv.guardar_catalogo_csv(nombre_fichero)
                 case 2:
-                    print("Rizwan")
+                    leer_csv.leer_catalogo_csv(nombre_fichero)
                 case 3:
-                    print("Elia")
+                    almacenar_json.guardar_catalogo_json(nombre_fichero)
                 case 4:
-                    print("Wen")
+                    leer_json.leer_catalogo_json(nombre_fichero)
         case _:
             print("Introduce una opción válida")
 

@@ -1,23 +1,44 @@
-catalogo =  [{"titulo": "Zelda: Breath of the wild", "anio": 2017, "genero": {"mundo abierto", "rpg"}},
-            {"titulo": "Dead by daylight", "anio": 2016, "genero": {"terror", "asimetrico"}},
-            {"titulo": "Geometry dash", "anio": 2014, "genero": {"plataformas", "musical"}}]
+catalogo = {
+    "zelda: breath of the wild": {
+        "titulo": "Zelda: Breath of the wild",
+        "anio": 2017,
+        "genero": ["mundo abierto", "rpg"]
+    },
+    "dead by daylight": {
+        "titulo": "Dead by daylight",
+        "anio": 2016,
+        "genero": ["terror", "asimetrico"]
+    },
+    "geometry dash": {
+        "titulo": "Geometry dash",
+        "anio": 2014,
+        "genero": ["plataformas", "musical"]
+    }
+}
+
 
 # ===== CRUD ====== #
 # - -- Create -- - #
 # Como un constructor
 def crear(clave, titulo, anio, genero):
-    # Convertir clave en minúsculas
     clave = clave.lower()
 
     if clave in catalogo:
         print("Juego ya creado.")
     else:
-        catalogo[clave] = {"titulo": titulo, "anio": anio, "genero": {genero}}
+        catalogo[clave] = {
+            "titulo": titulo,
+            "anio": anio,
+            "genero": [genero]
+        }
         print("Juego añadido correctamente.")
+
 
 # - -- Read -- - #
 def leer(clave):
-    juego = catalogo.get(clave.lower())
+    clave = clave.strip().lower().strip('"')
+
+    juego = catalogo.get(clave)
 
     # Si juego no está vacío, entonces imprime juego
     if juego:
